@@ -1,0 +1,48 @@
+/* * {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #fdfaf6;
+}
+
+nav > a {
+  text-decoration: none;
+  color: brown;
+  margin: 10px;
+}
+
+#title {
+  color: brown;
+}
+
+.featured {
+  font-weight: bold;
+  font-style: italic;
+}
+
+#order-section > h2 {
+  color: #ead196;
+}
+
+form label {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(165, 42, 42, 0.578);
+}
+
+#num {
+  width: 40px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 5px;
+  background-color: black;
+  color: white;
+
+  cursor: pointer;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background-color: #fdfaf6;
+  color: black;
+} */

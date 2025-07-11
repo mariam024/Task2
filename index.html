@@ -1,83 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Restaurant</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Restaurant</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+  * {
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    background-color: #FDFAF6;
+  }
+
+  nav>a {
+    text-decoration: none;
+    color: brown;
+    margin: 10px;
+  }
+
+  #title {
+    color: brown;
+  }
+
+  .featured {
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  #order-section>h2 {
+    color: #EAD196;
+  }
+
+  form label {
+    font-style: italic;
+    font-weight: 400;
+    color: rgba(165, 42, 42, 0.578);
+  }
+
+  #num {
+    width: 40px;
+  }
+
+  input[type="submit"],
+  input[type="reset"] {
+    padding: 5px;
+    background-color: black;
+    color: white;
+
+    cursor: pointer;
+  }
+
+  input[type="submit"]:hover,
+  input[type="reset"]:hover {
+    background-color: #FDFAF6;
+    color: black;
+  }
+</style>
+
+<body>
+  <header>
     <nav>
-      <a href="">Main</a>
-      <a href="">Make an Order</a>
-      <a href="">Contact Us</a>
+      <a href="#main">Main</a>
+      <a href="#order-section">Make an Order</a>
+      <a href="#info-section">Contact Us</a>
     </nav>
-    <h2>Black Goose Bistro | Pizza-on-Demand</h2>
-    <p>Our 12<sup>n</sup> wood-fired pizza are available for delivery, build your custom pizza and we'll deliver it within an hour.</p>
-    <fieldset>
-      <legend>Your information</legend>
-      <table>
-        <tr>
-          <td><label for="name">Name:</label></td>
-          <td><input type="text" name="username" id="name" /></td>
-        </tr>
-        <tr>
-          <td><label for="address">Address:</label></td>
-          <td><input type="text" name="address" id="address" /></td>
-        </tr>
-        <tr>
-          <td><label for="num">Telephone Number:</label></td>
-          <td><input type="number" name="number" id="num" /></td>
-        </tr>
-        <tr>
-          <td><label for="email">Email:</label></td>
-          <td><input type="email" name="email" id="email" /></td>
-        </tr>
-      </table>
-      <label for="instruction">Delivery Instruction:</label>
-      <br />
-      <textarea name="instruction" id="instruction" rows="4" cols="50" placeholder="No more than 400 character long"></textarea>
-    </fieldset>
-    <h2>Design Your Dream Pizza:</h2>
-    <fieldset>
-      <legend>Pizza specs</legend>
+    <section id="main">
+      <h2 id="title">Black Goose Bistro | Pizza-on-Demand</h2>
+      <p class="featured">Our 12<sup>n</sup> wood-fired pizza are available for delivery, build your custom pizza and
+        we'll deliver it
+        within an hour.</p>
+    </section>
+  </header>
+  <main>
+    <section id="info-section">
+      <form>
+        <fieldset>
+          <legend class="featured">Your information</legend>
+          <table>
+            <tbody>
+              <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" name="username" id="name" /></td>
+              </tr>
+              <tr>
+                <td><label for="address">Address:</label></td>
+                <td><input type="text" name="address" id="address" /></td>
+              </tr>
+              <tr>
+                <td><label for="number">Telephone Number:</label></td>
+                <td><input type="number" name="number" id="number" /></td>
+              </tr>
+              <tr>
+                <td><label for="email">Email:</label></td>
+                <td><input type="email" name="email" id="email" /></td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <label for="instruction">Delivery Instruction:</label>
+                  <br />
+                  <textarea name="instruction" id="instruction" rows="4" cols="50"
+                    placeholder="No more than 400 character long"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </fieldset>
+    </section>
+    <section id="order-section">
+      <h2>Design Your Dream Pizza:</h2>
       <fieldset>
-        <legend>Crust (Choose one):</legend>
-        <label><input type="radio" name="crust" value="classic" /> Classic White</label><br />
-        <label><input type="radio" name="crust" value="multigrain" /> Multigrain</label><br />
-        <label><input type="radio" name="crust" value="Choose-stuffed crust" /> Choose-stuffed crust</label><br />
-        <label><input type="radio" name="crust" value="Gluten-free" /> Gluten-free</label>
+        <legend class="featured">Pizza specs</legend>
+        <fieldset>
+          <legend class="featured">Crust (Choose one):</legend>
+          <input type="radio" name="crust" value="classic" id="classic" /><label for="classic"> Classic
+            White</label><br />
+          <label><input type="radio" name="crust" value="multigrain" /> Multigrain</label><br />
+          <label><input type="radio" name="crust" value="Choose-stuffed crust" /> Choose-stuffed crust</label><br />
+          <label><input type="radio" name="crust" value="Gluten-free" /> Gluten-free</label>
+        </fieldset>
+        <fieldset>
+          <legend class="featured">Toppings (Choose as many as you want):</legend>
+          <input type="checkbox" id="sauce" name="topping" value="Red Sauce" />
+          <label for="sauce">Red Sauce</label>
+          <br />
+          <input type="checkbox" id="cheese" name="topping" value="Mozzarella Cheese" />
+          <label for="cheese">Mozzarella Cheese</label>
+          <br />
+          <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni" />
+          <label for="pepperoni">Pepperoni</label>
+          <br />
+          <input type="checkbox" id="mushrooms" name="topping" value="Mushrooms" />
+          <label for="mushrooms">Mushrooms</label>
+          <br />
+          <input type="checkbox" id="peppers" name="topping" value="Peppers" />
+          <label for="peppers">Peppers</label>
+          <br />
+          <input type="checkbox" id="anchovies" name="topping" value="Anchovies" />
+          <label for="anchovies">Anchovies</label>
+          <br />
+        </fieldset>
+        <fieldset>
+          <legend class="featured">Number</legend>
+          <br />
+          <label for="num">How many pizzas:</label>
+          <input type="number" id="num" name="number" /><br />
+          <br />
+        </fieldset>
       </fieldset>
-      <fieldset>
-        <legend>Toppings (Choose as many as you want):</legend>
-        <input type="checkbox" id="sauce" name="topping" value="Red Sauce" />
-        <label for="sauce">Red Sauce</label>
-        <br />
-        <input type="checkbox" id="cheese" name="topping" value="Mozzarella Cheese" />
-        <label for="cheese">Mozzarella Cheese</label>
-        <br />
-        <input type="checkbox" id="pepperoni" name="topping" value="Pepperoni" />
-        <label for="pepperoni">Pepperoni</label>
-        <br />
-        <input type="checkbox" id="mushrooms" name="topping" value="Mushrooms" />
-        <label for="mushrooms">Mushrooms</label>
-        <br />
-        <input type="checkbox" id="peppers" name="topping" value="Peppers" />
-        <label for="peppers">Peppers</label>
-        <br />
-        <input type="checkbox" id="anchovies" name="topping" value="Anchovies" />
-        <label for="anchovies">Anchovies</label>
-        <br />
-      </fieldset>
-      <fieldset>
-        <legend>Number</legend>
-        <br />
-        <label for="num">How many pizzas:</label>
-        <input type="number" id="num" name="number" /><br />
-        <br />
-      </fieldset>
-    </fieldset>
+      </form>
+    </section>
     <br />
-    <input type="submit" value="Bring me a pizza!" />
-    <input type="reset" value="Reset" />
-  </body>
+    <input type="submit" value="Bring me a pizza!" class="button">
+    <input type="reset" value="Reset" class="button">
+  </main>
+</body>
+
 </html>
